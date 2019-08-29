@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { products,sellers } from '../counter.actions';
 import { HttpClient } from '@angular/common/http';
 import { Cart } from './cart';
+
 @Component({
   selector: 'app-my-counter',
   templateUrl: './my-counter.component.html',
@@ -11,24 +12,37 @@ import { Cart } from './cart';
 })
 export class MyCounterComponent {
   count$: Observable<number>;
+ 
 productList :Cart[]
   constructor(private store: Store<{ count: number }>,private http:HttpClient) {
-    this.count$ = store.pipe(select('count'));
-    this.http.get<Cart[]>("/assets/db.json")
-      .subscribe(data => {
-   this.productList=data;
-        console.log(this.productList);
-      });
-  }
-
-  products() {
-    this.store.dispatch(products());
+    // this.count$ = store.pipe(select('count'));
    
   }
 
+  products() {
+  
+     this.http.get<Cart[]>("/assets/db.json")
+      .subscribe(data => {
+   this.productList=Object.values(data);
+        console.log(this.productList);
+       
+      });
+  //   this.store.dispatch(products());
+   
+   }
+
   sellers() {
-    this.store.dispatch(sellers());
-  }
+     this.http.get<Cart[]>("/assets/db.json")
+      .subscribe(data => {
+   this.productList=Object.values(data);
+        console.log(this.productList);
+       
+      });
+   }
+   navigate()
+   {
+    //  router.navigateByUrl('/inbox/33/messages/44')
+   }
 
 }
 
