@@ -14,7 +14,7 @@ export class MyCounterComponent {
 productList :Cart[]
   constructor(private store: Store<{ count: number }>,private http:HttpClient) {
     this.count$ = store.pipe(select('count'));
-    this.http.get<Cart[]>("/assets/db.json/")
+    this.http.get<Cart[]>("/assets/db.json")
       .subscribe(data => {
    this.productList=data;
         console.log(this.productList);
