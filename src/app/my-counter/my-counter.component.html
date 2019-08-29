@@ -1,5 +1,11 @@
 <button id="products" (click)="products()">Products</button>
 <button id="sellers" (click)="sellers()">Sellers</button>
+<div *ngFor = "let product of productList">
+  <p>{{product.id}}
+    {{product.productName}}
+    {{product.description}}
+  </p>
+</div>
 
 
 
