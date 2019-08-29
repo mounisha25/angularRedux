@@ -1,12 +1,13 @@
 <button id="products" (click)="products()">Products</button>
 <button id="sellers" (click)="sellers()">Sellers</button>
-<div *ngFor = "let product of productList">
-  <p>{{product.id}}
-    {{product.productName}}
-    {{product.description}}
+<div *ngFor = "let items of productList">
+  <!-- <div *ngFor = "let items of product"> -->
+  <p>{{items.id}}
+    {{items.productName}}
+    {{items.description}}
   </p>
-</div>
 
+</div>
 
 
 <!-- 

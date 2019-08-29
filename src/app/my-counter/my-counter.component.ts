@@ -11,17 +11,19 @@ import { Cart } from './cart';
 })
 export class MyCounterComponent {
   count$: Observable<number>;
-
+productList :Cart[]
   constructor(private store: Store<{ count: number }>,private http:HttpClient) {
     this.count$ = store.pipe(select('count'));
-  }
-productsList :Cart[]
-  products() {
-    // this.store.dispatch(products());
-   this.http.get<Cart[]>("/assets/db.json")
+    this.http.get<Cart[]>("/assets/db.json/")
       .subscribe(data => {
-        console.log(data);
+   this.productList=data;
+        console.log(this.productList);
       });
+  }
+
+  products() {
+    this.store.dispatch(products());
+   
   }
 
   sellers() {

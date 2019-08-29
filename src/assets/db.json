@@ -1,24 +1,8 @@
 {
-  "products":
-  [
-    {
+  
         "id":"1",
         "productName":"Earphone",
         "description":"A high-quality audio experience, consistently balanced at any volume, thanks to Bose active EQ Wireless convenience, with easy Bluetooth and NFC pairing aided by voice prompts Exclusive stay hear plus tips keep the headphones comfortably in place during workouts Up to 6 hours battery life per charge Troubleshooting steps: Unpair your headphones from your device, and then pair them again. Sometimes refreshing the connection can help certain issue",
         "image":"https://images-na.ssl-images-amazon.com/images/I/71nQ4AO0HEL._SY355_.jpg"
-    },
-    {
-      "id":"2",
-      "productName":"OnePlus6T",
-      "description":"Rear Camera - 48MP (Primary) + 5 MP (Tele-photo) | Front Camera - 16MP 16.2814 centimeters (6.41-inch) with 2340 x 1080 pixels resolution Memory, Storage & SIM: 6GB RAM | 128GB internal memory | Dual SIM dual-standby (4G+4G) Android v9.0 Oxygen operating system with 2.84GHz Snapdragon 855 7nm octa core processor 3700mAH lithium-ion battery that supports 20W (5V/ 4A) fast charging 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase",
-      "image":"https://cdn.dxomark.com/wp-content/uploads/medias/post-22894/oneplus6t-1024x768-1-1024x768.jpg"
-    },
-    {
-      "id":3,
-      "productName":"Samsung Galaxy Watch Active ",
-      "description":"Sleek Sporty Design in 4 Premium finishes.Full Colour Super AMOLED with Always On Watchfaces.24/7 Activity Tracking - 4 stage Sleep, Activity with continuous HRM.Auto Stress Tracking & High HR Alert.39 Built in Exercise Modes.GPS & GLONASS.50m Water Resistant with Water Lock Mode",
-      "image":"https://www.bigw.com.au/medias/sys_master/images/images/h42/ha0/13416095121438.jpg"
-
-    }
-  ]
+  
 }
