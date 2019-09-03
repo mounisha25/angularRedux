@@ -21,7 +21,7 @@ productList :Cart[]
 
   products() {
   
-     this.http.get<Cart[]>("/assets/db.json")
+     this.http.get<Cart[]>("/assets/products.json")
       .subscribe(data => {
    this.productList=Object.values(data);
         console.log(this.productList);
@@ -32,7 +32,7 @@ productList :Cart[]
    }
 
   sellers() {
-     this.http.get<Cart[]>("/assets/db.json")
+     this.http.get<Cart[]>("/assets/sellers.json")
       .subscribe(data => {
    this.productList=Object.values(data);
         console.log(this.productList);

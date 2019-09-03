@@ -1,0 +1,24 @@
+{
+  "sellers":
+  [
+    {
+        "id":"1",
+        "productName":"Speaker",
+        "description":"This Amazon Renewed product will be in an unboxed or refurbished condition and has been professionally inspected and tested by an Amazon qualified supplier. Box and accessories may be generic.Bluetooth speakers made for electronic dance music (EDM).Extra bass for deep and punchy sound.One-touch listening with NFC and Bluetooth.1400mAh battery up to 16 hours of battery life for longer listening hours",
+        "image":"https://images-na.ssl-images-amazon.com/images/I/51fu5dyqb7L._SX679_.jpg"
+    },
+    {
+      "id":"2",
+      "productName":"HP Pavilion x360 Core i3 8th Gen ",
+      "description":"Processor: 8th Gen Intel Core i3-8145U processor, 2.1GHz base processor speed, 2 cores, 4MB cache.Operating System: Pre-loaded Windows 10 Home with lifetime validity.Display: 14-inch HD (1366 x 768) SVA Anti-Glare Micro-Edge Touchscreen display | WLED display.Memory & Storage: 4GB DDR4 RAM(1X4) with Intel UHD 620 Graphics | Storage: 256GB M.2 SSD.Design & Battery: Touchscreen convertible laptop | Thin and light design | Laptop weight: 1.59 kg | 3-cell Fast Charge Battery.Warranty: This genuine HP laptop comes with 1 year domestic warranty from HP covering manufacturing defects and not covering physical damage. For more details, see Warranty section below.Preinstalled Software: Windows 10 Home, MS Office Home & Student | In the box: Laptop with included battery, Inking pen, and charger",
+      "image":"https://images-na.ssl-images-amazon.com/images/I/81Fg4YIDTwL._SL1500_.jpg"
+    },
+    {
+      "id":3,
+      "productName":"Converse Unisex Canvas Sneakers",
+      "description":"Outer Material:Canvas.Lifestyle: Casual.Closure Type: Lace-Up.Sole Material:Rubber.Ankle Heigth:High-Top.Light Weighted Sneakers.Warranty Type: Manufacturer",
+      "image":"https://images-na.ssl-images-amazon.com/images/I/81WtkgIzyBL._UL1500_.jpg"
+
+    }
+  ]
+}
