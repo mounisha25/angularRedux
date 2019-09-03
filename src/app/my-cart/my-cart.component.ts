@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { products,sellers } from '../counter.actions';
+import { products,sellers } from '../cart.actions';
 import { HttpClient } from '@angular/common/http';
 import { Cart } from './cart';
 
 @Component({
   selector: 'app-my-counter',
-  templateUrl: './my-counter.component.html',
-  styleUrls: ['./my-counter.component.css'],
+  templateUrl: './my-cart.component.html',
+  styleUrls: ['./my-cart.component.css'],
 })
-export class MyCounterComponent {
+export class MyCartComponent {
   count$: Observable<number>;
  
 productList :Cart[]

@@ -4,14 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './counter.reducer';
-import { MyCounterComponent } from './my-counter/my-counter.component';
+import { cartReducer } from './cart.reducer';
+import { MyCartComponent } from './my-cart/my-cart.component';
 
 @NgModule({
-  declarations: [AppComponent, MyCounterComponent],
+  declarations: [AppComponent, MyCartComponent],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({ count: counterReducer }),
+    StoreModule.forRoot({ count: cartReducer }),
     HttpClientModule
   ],
   providers: [],

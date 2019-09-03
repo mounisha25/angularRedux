@@ -1,10 +1,10 @@
 import { createReducer, on } from '@ngrx/store';
-import { products,sellers} from './counter.actions';
+import { products,sellers} from './cart.actions';
 import { HttpClient } from '@angular/common/http';
-import { Cart } from './my-counter/cart';
+import { Cart } from './my-cart/cart';
 export const initialState = 0;
 
-export const counterReducer = createReducer(initialState,
+export const cartReducer = createReducer(initialState,
   on(products,state => state - 1),
   on(sellers, state => state - 1),
 
