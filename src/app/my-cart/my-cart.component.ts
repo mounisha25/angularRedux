@@ -4,17 +4,20 @@ import { Observable } from 'rxjs';
 import { products,sellers } from '../cart.actions';
 import { HttpClient } from '@angular/common/http';
 import { Cart } from './cart';
-
+import { Router } from '@angular/router';
+export var cartList :Cart = null ;
 @Component({
   selector: 'app-my-counter',
   templateUrl: './my-cart.component.html',
   styleUrls: ['./my-cart.component.css'],
 })
+
 export class MyCartComponent {
   count$: Observable<number>;
  id;
-productList :Cart[]
-  constructor(private store: Store<{ count: number }>,private http:HttpClient) {
+productList :Cart[];
+
+  constructor(private store: Store<{ count: number }>,private http:HttpClient,private router:Router) {
     // this.count$ = store.pipe(select('count'));
    
   }
@@ -39,9 +42,10 @@ productList :Cart[]
        
       });
    }
-   navigate()
+   navigate(id:number)
    {
-    // this.id=products.
+      cartList = this.productList[id];
+      router.navigateByUrl('/products')
    }
 
 }

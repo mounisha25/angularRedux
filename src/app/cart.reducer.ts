@@ -5,7 +5,7 @@ import { Cart } from './my-cart/cart';
 export const initialState = 0;
 
 export const cartReducer = createReducer(initialState,
-  on(products,state => state - 1),
+  on(products, state => products ),
   on(sellers, state => state - 1),
 
 );

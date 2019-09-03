@@ -1,0 +1,12 @@
+<div *ngFor = "let product of selectedList">
+   <ul *ngFor = "let items of product" > 
+    <div class="card">
+     <li><img src = {{items.image}}  height="100" width="100" style="display: block;
+  margin-left: auto;
+  margin-right: auto;"></li>
+    <li >Product Name:{{items.productName}}</li><br>
+    <li >Product Description: {{items.description}}</li><br>
+    </div>
+  </ul>
+
+</div>
