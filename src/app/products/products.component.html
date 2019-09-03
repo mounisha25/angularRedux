@@ -1,5 +1,11 @@
-<!-- <div *ngIf = ""> -->
+<div *ngIf = "selectedList != null"> 
     <p >Product Name:{{selectedList.productName}}</p><br>
     <img [src]= "selectedList.image"  height="400" width="400">
     <p >Product Description: {{selectedList.description}}</p>
-<!-- </div> -->
+ </div> 
+ <div *ngIf = "selectedList === null"> 
+    <p >Product Name:{{selectedSellers.productName}}</p><br>
+    <img [src]= "selectedSellers.image"  height="400" width="400">
+    <p >Product Description: {{selectedSellers.description}}</p>
+ </div> 
+ 

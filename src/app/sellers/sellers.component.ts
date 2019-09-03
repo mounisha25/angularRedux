@@ -5,7 +5,7 @@ import { products,sellers } from '../cart.actions';
 import { HttpClient } from '@angular/common/http';
 import { Cart } from '../my-cart/cart';
 import { Router } from '@angular/router';
-export { cartList } from '../my-cart/my-cart.component'
+import myCartComponent = require("../my-cart/my-cart.component"); myCartComponent.cartList = null;
 export var sellerList :Cart = null ;
 
 @Component({
@@ -25,9 +25,9 @@ productList :Cart[];
       .subscribe(data => {
    this.productList=Object.values(data);
         // console.log(this.productList);
-       
+       console.log(myCartComponent.cartList);
       });
-      cartList = null;
+ 
   }
 
 
