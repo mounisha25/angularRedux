@@ -7,9 +7,10 @@ import { StoreModule } from '@ngrx/store';
 import { cartReducer } from './cart.reducer';
 import { MyCartComponent } from './my-cart/my-cart.component';
 import { ProductsComponent } from './products/products.component';
+import { SellersComponent } from './sellers/sellers.component';
 
 @NgModule({
-  declarations: [AppComponent, MyCartComponent, ProductsComponent],
+  declarations: [AppComponent, MyCartComponent, ProductsComponent, SellersComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot({ count: cartReducer }),

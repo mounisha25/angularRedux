@@ -19,39 +19,24 @@ productList :Cart[];
 
   constructor(private store: Store<{ count: number }>,private http:HttpClient,private router:Router) {
     // this.count$ = store.pipe(select('count'));
-   
+      this.http.get<Cart[]>("/assets/products.json")
+      .subscribe(data => {
+   this.productList=Object.values(data);
+        // console.log(this.productList);
+       
+      });
+    cartList = null;
   }
 
-  products() {
-  
-     this.http.get<Cart[]>("/assets/products.json")
-      .subscribe(data => {
-   this.productList=Object.values(data);
-        console.log(this.productList);
-       
-      });
-  //   this.store.dispatch(products());
-   
-   }
 
-  sellers() {
-     this.http.get<Cart[]>("/assets/sellers.json")
-      .subscribe(data => {
-   this.productList=Object.values(data);
-        console.log(this.productList);
-       
-      });
-   }
-   navigate(id:number)
+  
+   navigateTo(id:number)
    {
-      cartList = this.productList[id];
-      router.navigateByUrl('/products')
+     console.log(id);
+      cartList = this.productList[0][id];
+      console.log(cartList);
    }
 
 }
 
 
-/*
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://github.com/ngrx/platform
-*/

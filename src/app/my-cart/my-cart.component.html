@@ -1,23 +1,16 @@
-<button id="products" (click)="products()">Products</button>
-<button id="sellers" (click)="sellers()">Sellers</button>
 
-<div *ngFor = "let product of productList">
-   <ul *ngFor = "let items of product" > 
+<div *ngFor = "let product of productList ">
+   <ul *ngFor = "let items of product, let i = index" > 
     <div class="card">
      <li><img src = {{items.image}}  height="100" width="100" style="display: block;
   margin-left: auto;
   margin-right: auto;"></li>
     <li >Product Name:{{items.productName}}</li><br>
     <li >Product Description: {{items.description}}</li><br>
-    
-     <a onclick="navigate(items.id)">More info</a>
+    <button routerLink="/products" (click)="navigateTo(i)">More info</button>
     </div>
   </ul>
 
 </div>
+<router-outlet></router-outlet>
 
-
-<!-- 
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://github.com/ngrx/platform
--->

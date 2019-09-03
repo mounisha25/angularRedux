@@ -1,0 +1,15 @@
+
+<div *ngFor = "let product of productList ">
+   <ul *ngFor = "let items of product, let i = index" > 
+    <div class="card">
+     <li><img src = {{items.image}}  height="100" width="100" style="display: block;
+  margin-left: auto;
+  margin-right: auto;"></li>
+    <li >Product Name:{{items.productName}}</li><br>
+    <li >Product Description: {{items.description}}</li><br>
+    <button routerLink="/products" (click)="navigateTo(i)">More info</button>
+    </div>
+  </ul>
+
+</div>
+<router-outlet></router-outlet>
