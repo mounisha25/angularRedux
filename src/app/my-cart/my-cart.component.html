@@ -3,14 +3,14 @@
 
 <div *ngFor = "let product of productList">
    <ul *ngFor = "let items of product" > 
-    <div class="card" onclick="navigate()">
+    <div class="card">
      <li><img src = {{items.image}}  height="100" width="100" style="display: block;
   margin-left: auto;
   margin-right: auto;"></li>
-  <li > 
-   ID: {{items.id}}</li><br>
     <li >Product Name:{{items.productName}}</li><br>
     <li >Product Description: {{items.description}}</li><br>
+    
+     <a routerLink="/products" onclick="navigate()">More info</a>
     </div>
   </ul>
 

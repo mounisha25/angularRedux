@@ -12,7 +12,7 @@ import { Cart } from './cart';
 })
 export class MyCartComponent {
   count$: Observable<number>;
- 
+ id;
 productList :Cart[]
   constructor(private store: Store<{ count: number }>,private http:HttpClient) {
     // this.count$ = store.pipe(select('count'));
@@ -41,7 +41,7 @@ productList :Cart[]
    }
    navigate()
    {
-    //  router.navigateByUrl('/inbox/33/messages/44')
+    // this.id=products.
    }
 
 }
