@@ -1,5 +1,5 @@
-import { Cart } from './my-cart/cart';
+import { Status } from './my-cart/cart';
 
 export interface AppState {
-  readonly cart: Cart[];
+  readonly status: Status[];
 }

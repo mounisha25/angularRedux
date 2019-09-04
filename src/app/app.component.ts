@@ -13,8 +13,9 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AppComponent {
  addCoin(status) {
+   if(status === true)
     this.store.dispatch({
-      type: 'ADD_COIN',
+      type: 'Products',
       payload: <Status> {
        status:status
       }

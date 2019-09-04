@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { AppState } from '../app.state';
 // import { products,sellers } from '../cart.actions';
 import { HttpClient } from '@angular/common/http';
-import { Cart } from './cart';
+import { Cart,Status } from './cart';
 import { Router } from '@angular/router';
 export var cartList :Cart = null ;
 @Component({
@@ -17,7 +17,7 @@ export class MyCartComponent {
   count$: Observable<number>;
  id;
 productList :Cart[];
- TempCart: Observable<Cart[]>;
+ TempCart: Observable<Status[]>;
   constructor(private http:HttpClient,private router:Router,private store: Store<AppState>) {
    
     this.TempCart = this.store.select(state => state.cart);
