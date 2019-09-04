@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { products,sellers } from '../cart.actions';
+import { AppState } from '../app.state';
+// import { products,sellers } from '../cart.actions';
 import { HttpClient } from '@angular/common/http';
 import { Cart } from './cart';
 import { Router } from '@angular/router';
@@ -16,9 +17,11 @@ export class MyCartComponent {
   count$: Observable<number>;
  id;
 productList :Cart[];
-
-  constructor(private store: Store<{ count: number }>,private http:HttpClient,private router:Router) {
-    // this.count$ = store.pipe(select('count'));
+ TempCart: Observable<Cart[]>;
+  constructor(private http:HttpClient,private router:Router,private store: Store<AppState>) {
+   
+    this.TempCart = this.store.select(state => state.cart);
+   
       this.http.get<Cart[]>("/assets/products.json")
       .subscribe(data => {
    this.productList=Object.values(data);

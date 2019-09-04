@@ -1,4 +1,10 @@
+
+
+
+import { Status } from './my-cart/cart';
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +12,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-
+ addCoin(status) {
+    this.store.dispatch({
+      type: 'ADD_COIN',
+      payload: <Status> {
+       status:status
+      }
+    });
+  }
 }
 
 

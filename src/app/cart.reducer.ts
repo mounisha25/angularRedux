@@ -1,17 +1,17 @@
-import { createReducer, on } from '@ngrx/store';
-import { products,sellers} from './cart.actions';
-import { HttpClient } from '@angular/common/http';
 import { Cart } from './my-cart/cart';
-export const initialState = 0;
+import {Action} from '@ngrx/store';
+export const Products = 'Products';
+export const Sellers = 'Sellers';
+export function cartReducer(state:Cart[]= [],action)
+{
+  switch(action.type){
+    case Products:
+      return[...state,action.payload];
+    case Sellers:
+      return[...state,action.payload];
+    default:
+      return state;
+  }
+}
 
-export const cartReducer = createReducer(initialState,
-  on(products, state => products ),
-  on(sellers, state => state - 1),
 
-);
-
-
-/*
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://github.com/ngrx/platform
-*/

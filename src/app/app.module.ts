@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
-import { cartReducer } from './cart.reducer';
+ import { cartReducer } from './cart.reducer';
 import { MyCartComponent } from './my-cart/my-cart.component';
 import { ProductsComponent } from './products/products.component';
 import { SellersComponent } from './sellers/sellers.component';
@@ -13,7 +13,7 @@ import { SellersComponent } from './sellers/sellers.component';
   declarations: [AppComponent, MyCartComponent, ProductsComponent, SellersComponent],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({ count: cartReducer }),
+    StoreModule.forRoot({ Cart: cartReducer }),
     HttpClientModule,
     AppRoutingModule
   ],
@@ -23,7 +23,3 @@ import { SellersComponent } from './sellers/sellers.component';
 export class AppModule {}
 
 
-/*
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://github.com/ngrx/platform
-*/

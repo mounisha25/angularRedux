@@ -1,6 +1,6 @@
 
 
-<div *ngIf="productList===undefined"><div class="loader"></div>
+<div *ngIf="productList===undefined && TempCart!=0"><div class="loader"></div>
 </div>
 <div *ngFor = "let product of productList ">
    <ul *ngFor = "let items of product, let i = index" > 
