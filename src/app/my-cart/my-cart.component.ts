@@ -32,9 +32,9 @@ productList :Cart[];
   
    navigateTo(id:number)
    {
-     console.log(id);
+    // console.log(id);
       cartList = this.productList[0][id];
-      console.log(cartList);
+      //console.log(cartList);
    }
 
 }

@@ -20,7 +20,7 @@ ngOnInit()
 {
   this.selectedList = cartList;
   this.selectedSellers = sellerList;
-  console.log(this.selectedSellers);
+ // console.log(this.selectedSellers);
 }
 
 }

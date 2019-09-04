@@ -5,7 +5,7 @@ import { products,sellers } from '../cart.actions';
 import { HttpClient } from '@angular/common/http';
 import { Cart } from '../my-cart/cart';
 import { Router } from '@angular/router';
-import myCartComponent = require("../my-cart/my-cart.component"); myCartComponent.cartList = null;
+import myCartComponent = require("../my-cart/my-cart.component"); 
 export var sellerList :Cart = null ;
 
 @Component({
@@ -25,7 +25,8 @@ productList :Cart[];
       .subscribe(data => {
    this.productList=Object.values(data);
         // console.log(this.productList);
-       console.log(myCartComponent.cartList);
+        myCartComponent.cartList = null;
+       //console.log(myCartComponent.cartList);
       });
  
   }
@@ -33,8 +34,8 @@ productList :Cart[];
 
    navigateTo(id:number)
    {
-     console.log(id);
+     //console.log(id);
       sellerList = this.productList[0][id];
-      console.log(sellerList);
+      //console.log(sellerList);
    }
 }
